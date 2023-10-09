@@ -408,6 +408,7 @@ body::-webkit-scrollbar {
   width: 70%;
   align-self: center;
 }
+
 .goBack p {
   /* background-color:dimgray; */
 }
@@ -433,3 +434,17 @@ body::-webkit-scrollbar {
 }
 
 .titleDivisionFooter {}
+
+.movieReqDetails {
+  font-size: 12px;
+  margin: 0px;
+  font-weight: bold;
+  color: #787373;
+}
+
+.reqContainer {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+}

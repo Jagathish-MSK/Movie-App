@@ -22,9 +22,9 @@ function MovieList() {
           new Set(response.data.flatMap((movie) => movie.genres))
         );
         setGenres(uniqueGenres);
-      }) 
+      })
       .catch((error) => {
-        console.error(error );
+        console.error(error);
       });
   }, []);
 
@@ -113,6 +113,11 @@ function MovieList() {
             <img className='hoveredImage' src={imgSource} alt=''></img>
             <div className='detailPan'>
               <p className='movieName_Hov'>{selectedMovie.title}</p>
+              <div className='reqContainer'>
+                <p className='movieReqDetails'>IMDB: {selectedMovie.imdb_rating}</p>
+                <p className='movieReqDetails'>Length: {selectedMovie.length}</p>
+                <p className='movieReqDetails'>Slug</p>
+              </div>
               <p className='movieOverview'>{selectedMovie.overview}</p>
             </div>
           </div>
