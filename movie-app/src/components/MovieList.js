@@ -113,11 +113,17 @@ function MovieList() {
             <img className='hoveredImage' src={imgSource} alt=''></img>
             <div className='detailPan'>
               <p className='movieName_Hov'>{selectedMovie.title}</p>
+              <div className='dirContainer'>
+                <p className='movieReqDirHeader'>Directors:</p>
+                <div className='nameList'>
+                    <p className='dirName' key={selectedMovie.director}>{selectedMovie.director.join(', ')}</p>
+                </div>
+              </div>
               <div className='reqContainer'>
                 <p className='movieReqDetails'>IMDB: {selectedMovie.imdb_rating}</p>
                 <p className='movieReqDetails'>Length: {selectedMovie.length}</p>
-                <p className='movieReqDetails'>Slug</p>
               </div>
+              {/* <p className='movieReqDetails'>Slug</p> */}
               <p className='movieOverview'>{selectedMovie.overview}</p>
             </div>
           </div>
